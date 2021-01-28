@@ -1,94 +1,167 @@
-html, body {
+html,
+body {
   background-color: #f2f2f2;
   font-family: Arial;
 }
 
-.grid {
-  width: 100%;
-  height: auto;
+p, span {
+  color: white;
+  padding: auto;
+  text-align: center;
 }
 
-.grid > .col-max {
+.grid {
+  width: 50%;
+  display: flex;
+  height: auto;
+  margin: auto;
+}
+
+.grid > .col-100 {
   width: 100%;
+  height: auto;
+  background-color: #ffc240;
+  border-radius: 5px;
+  border: solid 1px #ffae00;
 }
 
 .grid > .col-75 {
   width: 75%;
+  height: auto;
+  background-color: #40ff80;
+  border-radius: 5px;
+  border: solid 1px #03e04d;
 }
 
 .grid > .col-50 {
   width: 50%;
+  height: auto;
+  background-color: #406dff;
+  border-radius: 5px;
+  border: solid 1px #003cff;
 }
 
 .grid > .col-25 {
   width: 25%;
+  height: auto;
+  background-color: #8940ff;
+  border-radius: 5px;
+  border: solid 1px #5f00f7;
 }
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .grid > .col-d-100 {
     width: 100%;
+    height: auto;
+    background-color: #ffc240;
+    border-radius: 5px;
   }
 
   .grid > .col-d-75 {
     width: 75%;
+    height: auto;
+    background-color: #40ff80;
+    border-radius: 5px;
   }
 
   .grid > .col-d-50 {
     width: 50%;
+    height: auto;
+    background-color: #406dff;
+    border-radius: 5px;
   }
 
   .grid > .col-d-25 {
     width: 25%;
+    height: auto;
+    background-color: #8940ff;
+    border-radius: 5px;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .grid > .col-l-100 {
     width: 100%;
+    height: auto;
+    background-color: #ffc240;
+    border-radius: 5px;
   }
 
   .grid > .col-l-75 {
     width: 75%;
+    height: auto;
+    background-color: #40ff80;
+    border-radius: 5px;
   }
 
   .grid > .col-l-50 {
     width: 50%;
+    height: auto;
+    background-color: #406dff;
+    border-radius: 5px;
   }
 
   .grid > .col-l-25 {
     width: 25%;
+    height: auto;
+    background-color: #8940ff;
+    border-radius: 5px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .grid > .col-t-100 {
     width: 100%;
+    height: auto;
+    background-color: #ffc240;
+    border-radius: 5px;
   }
 
   .grid > .col-t-75 {
     width: 75%;
+    height: auto;
+    background-color: #40ff80;
+    border-radius: 5px;
   }
 
   .grid > .col-t-50 {
     width: 50%;
+    height: auto;
+    background-color: #406dff;
+    border-radius: 5px;
   }
 
   .grid > .col-t-25 {
     width: 25%;
+    height: auto;
+    background-color: #8940ff;
+    border-radius: 5px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .grid > .col-m-100 {
     width: 100%;
+    height: auto;
+    background-color: #ffc240;
+    border-radius: 5px;
   }
 
   .grid > .col-m-75 {
     width: 75%;
+    height: auto;
+    background-color: #40ff80;
+    border-radius: 5px;
   }
 
   .grid > .col-m-50 {
     width: 50%;
+    height: auto;
+    background-color: #406dff;
+    border-radius: 5px;
   }
 
   .grid > .col-m-25 {
     width: 25%;
+    height: auto;
+    background-color: #8940ff;
+    border-radius: 5px;
   }
 }

@@ -1,8 +1,11 @@
 @each $device, $pixels in $devices {
-    @media only screen and (max-width: $pixels) {
-        @each $size, $name in $sizes {
+    @media (max-width: $pixels) {
+        @each $size, $name, $color in $sizes {
             .grid > .col-#{$device}-#{$name} {
                 width: $size;
+                height: auto;
+                background-color: $color;
+                border-radius: 5px;
             }
         }
     }

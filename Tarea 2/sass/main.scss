@@ -1,31 +1,56 @@
 @import "variables";
 @import "mixins";
 
-html, body {
+html,
+body {
     background-color: $background;
     font-family: Arial;
+
+}
+
+p, span {
+    color: white;
+    padding: auto;
+    text-align: center;
 }
 
 .grid {
+    width: 50%;
+    display: flex;
+    height: auto;
+    margin: auto;
+}
+
+.grid>.col-100 {
     width: 100%;
     height: auto;
+    background-color: #ffc240;
+    border-radius: 5px;
+    border: solid 1px #ffae00;
 }
 
-.grid > .col-max {
-    width: 100%;
-}
-
-.grid > .col-75 {
+.grid>.col-75 {
     width: 75%;
+    height: auto;
+    background-color: #40ff80;
+    border-radius: 5px;
+    border: solid 1px #03e04d;
 }
 
-.grid > .col-50 {
+.grid>.col-50 {
     width: 50%;
+    height: auto;
+    background-color: #406dff;
+    border-radius: 5px;
+    border: solid 1px  #003cff;
 }
 
-.grid > .col-25 {
+.grid>.col-25 {
     width: 25%;
+    height: auto;
+    background-color: #8940ff;
+    border-radius: 5px;
+    border: solid 1px #5f00f7;
 }
-
 
 @import "secondary";
