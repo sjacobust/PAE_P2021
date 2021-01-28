@@ -1,0 +1,9 @@
+@each $device, $pixels in $devices {
+    @media only screen and (max-width: $pixels) {
+        @each $size, $name in $sizes {
+            .grid > .col-#{$device}-#{$name} {
+                width: $size;
+            }
+        }
+    }
+}

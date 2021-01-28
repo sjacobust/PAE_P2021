@@ -1,0 +1,94 @@
+html, body {
+  background-color: #f2f2f2;
+  font-family: Arial;
+}
+
+.grid {
+  width: 100%;
+  height: auto;
+}
+
+.grid > .col-max {
+  width: 100%;
+}
+
+.grid > .col-75 {
+  width: 75%;
+}
+
+.grid > .col-50 {
+  width: 50%;
+}
+
+.grid > .col-25 {
+  width: 25%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .grid > .col-d-100 {
+    width: 100%;
+  }
+
+  .grid > .col-d-75 {
+    width: 75%;
+  }
+
+  .grid > .col-d-50 {
+    width: 50%;
+  }
+
+  .grid > .col-d-25 {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .grid > .col-l-100 {
+    width: 100%;
+  }
+
+  .grid > .col-l-75 {
+    width: 75%;
+  }
+
+  .grid > .col-l-50 {
+    width: 50%;
+  }
+
+  .grid > .col-l-25 {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid > .col-t-100 {
+    width: 100%;
+  }
+
+  .grid > .col-t-75 {
+    width: 75%;
+  }
+
+  .grid > .col-t-50 {
+    width: 50%;
+  }
+
+  .grid > .col-t-25 {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .grid > .col-m-100 {
+    width: 100%;
+  }
+
+  .grid > .col-m-75 {
+    width: 75%;
+  }
+
+  .grid > .col-m-50 {
+    width: 50%;
+  }
+
+  .grid > .col-m-25 {
+    width: 25%;
+  }
+}

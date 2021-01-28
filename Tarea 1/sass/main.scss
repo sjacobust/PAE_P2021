@@ -1,0 +1,146 @@
+/*
+* Autor: Santiago Jacobus
+* Materia: PAE
+* Fecha: 24/01/2021
+* ITESO
+*/
+@import "variables";
+
+.grid-system {
+    width: 100%;
+    height: auto;
+}
+
+.navbar {
+    width: 100%;
+    background-color: $bars_colors;
+}
+
+.sidebar {
+    background-color: $bars_colors;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $anchor_color;
+}
+
+.grid-system .col-max {
+    width: 100%;
+}
+
+.grid-system .col-75 {
+    width: 75%;
+}
+
+.grid-system .col-50 {
+    width: 50%;
+}
+
+.grid-system .col-25 {
+    width: 25%;
+}
+
+@media (max-width: 1200px) {
+
+    /* Desktops */
+    .grid-system .col-d-max {
+        width: 100%;
+    }
+
+    .grid-system .col-d-75 {
+        width: 75%;
+    }
+
+    .grid-system .col-d-50 {
+        width: 50%;
+    }
+
+    .grid-system .col-d-25 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* Laptops */
+    .grid-system .col-l-max {
+        width: 100%;
+    }
+
+    .grid-system .col-l-75 {
+        width: 75%;
+    }
+
+    .grid-system .col-l-50 {
+        width: 50%;
+    }
+
+    .grid-system .col-l-25 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Tablets */
+    .grid-system .col-t-max {
+        width: 100%;
+    }
+
+    .grid-system .col-t-75 {
+        width: 75%;
+    }
+
+    .grid-system .col-t-50 {
+        width: 50%;
+    }
+
+    .grid-system .col-t-25 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile */
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar a {
+        display: block;
+    }
+
+    .grid-system .col-m-max {
+        width: 100%;
+    }
+
+    .grid-system .col-m-75 {
+        width: 75%;
+    }
+
+    .grid-system .col-m-50 {
+        width: 50%;
+    }
+
+    .grid-system .col-m-25 {
+        width: 25%;
+    }
+}

@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+
+html, body {
+    background-color: $background;
+    font-family: Arial;
+}
+
+.grid {
+    width: 100%;
+    height: auto;
+}
+
+.grid > .col-max {
+    width: 100%;
+}
+
+.grid > .col-75 {
+    width: 75%;
+}
+
+.grid > .col-50 {
+    width: 50%;
+}
+
+.grid > .col-25 {
+    width: 25%;
+}
+
+
+@import "secondary";
