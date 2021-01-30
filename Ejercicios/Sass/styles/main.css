@@ -1,0 +1,136 @@
+.navItems {
+  display: inline;
+  background-color: #333;
+}
+
+.navItems li {
+  color: #EEEEEE;
+}
+
+.grid {
+  width: 75%;
+  display: flex;
+  margin-top: 1%;
+  text-align: center;
+}
+
+[class*=col-] {
+  height: auto;
+  border-radius: 5px;
+  padding: 1%;
+  margin-top: 1%;
+}
+
+.grid > .col-100 {
+  width: 100%;
+  background-color: #ffc240;
+  border: solid 1px #ffae00;
+}
+
+.grid > .col-75 {
+  width: 75%;
+  background-color: #40ff80;
+  border: solid 1px #03e04d;
+}
+
+.grid > .col-50 {
+  width: 50%;
+  background-color: #406dff;
+  border: solid 1px #003cff;
+}
+
+.grid > .col-25 {
+  width: 25%;
+  background-color: #8940ff;
+  border: solid 1px #5f00f7;
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .grid > .col-d-100 {
+    width: 100%;
+    background-color: #ffc240;
+  }
+
+  .grid > .col-d-75 {
+    width: 75%;
+    background-color: #40ff80;
+  }
+
+  .grid > .col-d-50 {
+    width: 50%;
+    background-color: #406dff;
+  }
+
+  .grid > .col-d-25 {
+    width: 25%;
+    background-color: #8940ff;
+  }
+}
+@media (max-width: 1024px) {
+  .grid > .col-l-100 {
+    width: 100%;
+    background-color: #ffc240;
+  }
+
+  .grid > .col-l-75 {
+    width: 75%;
+    background-color: #40ff80;
+  }
+
+  .grid > .col-l-50 {
+    width: 50%;
+    background-color: #406dff;
+  }
+
+  .grid > .col-l-25 {
+    width: 25%;
+    background-color: #8940ff;
+  }
+}
+@media (max-width: 768px) {
+  .grid > .col-t-100 {
+    width: 100%;
+    background-color: #ffc240;
+  }
+
+  .grid > .col-t-75 {
+    width: 75%;
+    background-color: #40ff80;
+  }
+
+  .grid > .col-t-50 {
+    width: 50%;
+    background-color: #406dff;
+  }
+
+  .grid > .col-t-25 {
+    width: 25%;
+    background-color: #8940ff;
+  }
+}
+@media (max-width: 480px) {
+  .grid > .col-m-100 {
+    width: 100%;
+    background-color: #ffc240;
+  }
+
+  .grid > .col-m-75 {
+    width: 75%;
+    background-color: #40ff80;
+  }
+
+  .grid > .col-m-50 {
+    width: 50%;
+    background-color: #406dff;
+  }
+
+  .grid > .col-m-25 {
+    width: 25%;
+    background-color: #8940ff;
+  }
+}
