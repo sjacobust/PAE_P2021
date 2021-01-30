@@ -1,2 +1,14 @@
 @import "variables";
+@import "mixins";
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    @include elements-reset;
+    background-color: $background;
+}
+
+nav {
+    @include elements-reset;
+}
+
 @import "secondary";
