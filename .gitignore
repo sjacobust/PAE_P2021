@@ -1,3 +1,4 @@
 Sesion*
 *zip
 *.code-workspace
+*/node-modules/*

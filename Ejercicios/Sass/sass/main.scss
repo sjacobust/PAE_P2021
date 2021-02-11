@@ -9,6 +9,7 @@ html, body {
 
 nav {
     @include elements-reset;
+    background-color: $primary-color;
 }
 
 @import "secondary";

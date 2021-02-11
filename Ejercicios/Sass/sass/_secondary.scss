@@ -1,6 +1,10 @@
+@function getWidth($size, $base: 12) {
+    @return (100*$size / $base) * 1%;
+}
+
 .navItems {
-    background-color: $primary-color;
     display: flex;
+    @include elements-reset;
 }
 
 li a{
@@ -13,50 +17,40 @@ li a{
     margin-left: .5%;
 }
 
-.navItems li:not(:last-of-type):hover{
-    @extend .navItems;
+.navItems li:not(:last-of-type):not(:first-of-type):hover{
     background-color: $accent-color;
 }
 
 .grid {
+    width: 100%;
+    @include elements-reset;
     display: flex;
     text-align: center;
 }
 
+
 [class*='col-'] {
-    height: auto;
     border-radius: 5px;
-    padding: .75em;
+    padding-left: .75em;
 }
 
-.grid>.col-100 {
-    width: 100%;
-}
-
-.grid>.col-75 {
-    width: 75%;
-}
-
-.grid>.col-50 {
-    width: 50%;
-}
-
-.grid>.col-25 {
-    width: 25%;
-}
-
-@media screen and (max-width: 480px) {
-    .grid {
-        display: block;
-    }
+@for $column from 1 through $max-columns {
+    .grid > .col-#{$column} {
+        width: getWidth($column, $max-columns);
+    }            
 }
 
 @each $device, $pixels in $devices {
     @media (max-width: $pixels) {
-        @each $size, $name in $sizes {
-            .grid > .col-#{$device}-#{$name} {
-                width: $size;
+        @if $pixels == 480px {
+            .grid {
+                display: block;
             }
+        }
+        @for $column from 1 through $max-columns {
+            .grid > .col-#{$device}-#{$column} {
+                width: getWidth($column, $max-columns);
+            }            
         }
     }
 }
