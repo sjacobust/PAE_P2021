@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles": "gulp styles",
     "scripts": "gulp scripts",
-    "start": "npm run build && http-server ./dist",
-    "build": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "Santiago Jacobus",
   "license": "ISC",
@@ -16,6 +16,8 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-webserver": "^0.9.1",
+    "handlebars": "^4.7.6",
     "http-server": "^0.12.3",
     "sass": "^1.32.7",
     "typescript": "^4.1.5"
