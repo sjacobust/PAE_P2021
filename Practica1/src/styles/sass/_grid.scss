@@ -3,12 +3,17 @@
 }
 
 .grid {
-    width: 100%;
+    width: 75%;
     @include elements-reset;
-    display: flex;
     text-align: center;
+    display: flex;
 }
 
+.row {
+    width: 100%;
+    display: block;
+    height: auto;
+}
 
 [class*='col-'] {
     border-radius: 5px;
@@ -25,7 +30,9 @@
     @media (max-width: $pixels) {
         @if $pixels == 480px {
             .grid {
+                width: 100%;
                 display: block;
+                overflow: visible;
             }
         }
         @for $column from 1 through $max-columns {

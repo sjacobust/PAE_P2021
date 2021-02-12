@@ -1,9 +1,14 @@
 .grid {
-  width: 100%;
+  width: 75%;
   margin: 0;
   padding: 0;
-  display: flex;
-  text-align: center; }
+  text-align: center;
+  display: flex; }
+
+.row {
+  width: 100%;
+  display: block;
+  height: auto; }
 
 [class*='col-'] {
   border-radius: 5px;
@@ -125,7 +130,9 @@
 
 @media (max-width: 480px) {
   .grid {
-    display: block; }
+    width: 100%;
+    display: block;
+    overflow: visible; }
   .grid > .col-m-1 {
     width: 8.33333%; }
   .grid > .col-m-2 {
@@ -155,10 +162,16 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
   background-color: #FDFFFC;
   color: #18181C; }
 
-.newsCard {
+img {
+  width: 100%;
+  height: auto; }
+
+.newsItem {
   background-color: #657ED4;
-  color: #18181C; }
+  color: #18181C;
+  border-style: solid;
+  border-width: .10px;
+  border-color: #902D41; }

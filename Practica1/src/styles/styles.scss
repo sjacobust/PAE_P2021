@@ -5,15 +5,20 @@
 html, body {
     @include elements-reset;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: $base-size;
     background-color: $background;
     color: $primary-color;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
 
-.newsCard {
+.newsItem {
     background-color: $secondary-color;
     color: $primary-color;
-
+    border-style: solid;
+    border-width: .10px;
+    border-color: $accent-color;
 }
 
