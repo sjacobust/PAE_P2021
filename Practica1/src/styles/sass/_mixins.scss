@@ -1,0 +1,9 @@
+@mixin anchor-reformat {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@mixin elements-reset {
+    margin: 0;
+    padding: 0;
+}
