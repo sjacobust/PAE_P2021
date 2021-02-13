@@ -6,23 +6,51 @@
  * API KEY = befa2c5d0c474bce9b5a6ae237d73e0f
 */
 let url = 'http://newsapi.org/v2/top-headlines?' +
-    'country=us&' +
-    'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';
+    'country=us&' + 'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';
+;
 let req = new Request(url);
-let articles = {};
-const apiRes = fetch(req)
-    .then(function (response) {
-    return response.json();
-});
+const newsSource = document.getElementById('newsContainer').innerHTML;
+const newsTemplate = Handlebars.compile(newsSource);
+let searchBar = document.getElementById("searchBar");
 const getArticles = () => {
-    apiRes.then((a) => {
-        articles = a['articles'];
+    console.log(searchBar.value);
+    switch (searchBar.value) {
+        case "":
+            url = 'http://newsapi.org/v2/top-headlines?' +
+                'country=us&' + 'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';
+            break;
+        default:
+            url = 'http://newsapi.org/v2/everything?' +
+                `q=${searchBar.value}&` +
+                'sortBy=popularity&' +
+                'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';
+            break;
+    }
+    req = new Request(url);
+    contactAPI(req);
+};
+searchBar.addEventListener("keyup", (e) => {
+    if (e.key === 'Enter' || e.code == "KeyEnter") {
+        getArticles();
+    }
+});
+const contactAPI = (req) => {
+    const apiResponse = fetch(req)
+        .then(function (response) {
+        return response.json();
+    });
+    showArticles(apiResponse);
+};
+const showArticles = (apiResponse) => {
+    apiResponse.then((a) => {
+        let articles = a['articles'];
         console.log(articles);
-        const newsSource = document.getElementById('newsContainer').innerHTML;
-        const newsTemplate = Handlebars.compile(newsSource);
-        document.getElementById('newsContainer').innerHTML = newsTemplate({
-            news: articles
-        });
+        templateChange(articles);
     });
 };
-getArticles();
+const templateChange = (articles) => {
+    document.getElementById('newsContainer').innerHTML = newsTemplate({
+        news: articles
+    });
+};
+contactAPI(req);

@@ -10,29 +10,42 @@
 </head>
 
 <body>
-    <h1>News Outlet!</h1>
-    <select>
-        <option value="source">From Specific Source</option>
-        <option value="keyword">With Specific Keyword</option>
-    </select>
-    <input type="text" name="searchBar" id="searchBar" placeholder="Search Bar">
-    <button>Search</button>
-    <p>News outlet powered by <a href="https://newsapi.org/">NewsAPI</a></p>
-    <div id="newsContainer" class="newsCard grid">
-        {{#each news}}
-        <div class="newsItem row col-6 col-d-6 col-t-12 col-m-12">
-            <img src="{{urlToImage}}" />
-            <div class="row">
-                <h5 class="col-12">{{title}}</h5>
-            </div>
-            <div class="row">
-                <p class="col-12">{{description}}</p>
-            </div>
-            <div class="row">
-                <a href="{{url}}" target="_blank" class="col-12">Ver más</a>
+    <div class="grid">
+        <div class="row">
+            <div class="col-4 col-t-12 col-m-12">
+                <h1>News Outlet!</h1>
             </div>
         </div>
+        <div class="row">
+            <div class="col-3 col-l-12 col-t-8 col-m-8">
+                <input type="text" name="searchBar" id="searchBar" placeholder="Search Bar">
+                <button onclick="getArticles();">Search</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-l-12 col-t-12 col-m-12">
+                <p>News outlet powered by <a href="https://newsapi.org/">NewsAPI</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="newsContainer" class="newsCard grid">
+        {{#if news}}
+        {{#each news}}
+        <div class="newsItem row">
+            {{#if urlToImage}}
+            <img src="{{urlToImage}}" class="col-2 col-d-3 col-l-4 col-t-12 col-m-12" />
+            {{else}}
+            <h3 class="col-2 col-d-3 col-l-4 col-t-12 col-m-12"> NO IMAGE </h3>
+            {{/if}}
+            <h5 class="col-4 col-d-3 col-l-4 col-t-12 col-m-12">{{title}}</h5>
+            <p class="col-4 col-d-3 col-l-3 col-t-12 col-m-12">{{description}}</p>
+            <a href="{{url}}" target="_blank" class="col-2 col-d-3 col-l-1 col-t-12 col-m-12">Ver más</a>
+        </div>
+
         {{/each}}
+        {{else}}
+        <h1 class="col-12">Whoops! Something went wrong.</h1>
+        {{/if}}
     </div>
     <script src="/assets/scripts/main.js"></script>
 </body>
