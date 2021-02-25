@@ -19,7 +19,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('html', function() {
-    return gulp.src('src/index.html')
+    return gulp.src('views/index.html')
     .pipe(gulp.dest(buildDir));
 });
 
@@ -47,5 +47,5 @@ gulp.task('watch:scripts', gulp.series("scripts", function(done) {
 }));
 
 
-gulp.task('build', gulp.parallel(['styles', 'scripts', 'html']));
+gulp.task('build', gulp.parallel(['styles', 'scripts']));
 gulp.task('default', gulp.parallel(['watch:styles', 'watch:scripts', 'watch:html', 'serve']));
