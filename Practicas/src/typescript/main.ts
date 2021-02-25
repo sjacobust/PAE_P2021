@@ -9,9 +9,9 @@
 // FIRST CALL TO API, NEWS LOAD.
 
 declare var Handlebars: any;
+const port = location.port;
 
-let url: string = 'http://newsapi.org/v2/top-headlines?' +
-    'country=us&' + 'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';;
+let url: string = `http://localhost:${port}/news`;
 let req: Request = new Request(url);
 const newsSource = document.getElementById('newsContainer').innerHTML;
 const newsTemplate = Handlebars.compile(newsSource);
@@ -19,18 +19,7 @@ let searchBar = document.getElementById("searchBar") as HTMLInputElement;
 
 const getArticles = () => {
     console.log(searchBar.value);
-    switch (searchBar.value) {
-        case "":
-            url = 'http://newsapi.org/v2/top-headlines?' +
-                'country=us&' + 'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';
-            break;
-        default:
-            url = 'http://newsapi.org/v2/everything?' +
-                `q=${searchBar.value}&` +
-                'sortBy=popularity&' +
-                'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f';
-            break;
-    }
+    url = `http://localhost:${port}/news?keyword=${searchBar.value}`;
     req = new Request(url);
     contactAPI(req);
 };
