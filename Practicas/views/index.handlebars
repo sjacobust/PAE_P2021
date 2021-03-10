@@ -1,0 +1,14 @@
+{{#each news}}
+<div class="newsItem row">
+    {{#if urlToImage}}
+    <img src="{{urlToImage}}" class="col-2 col-d-3 col-l-4 col-t-12 col-m-12" />
+    {{else}}
+    <h3 class="col-2 col-d-3 col-l-4 col-t-12 col-m-12"> NO IMAGE </h3>
+    {{/if}}
+    <h5 class="col-4 col-d-3 col-l-4 col-t-12 col-m-12">{{title}}</h5>
+    <hr class="vertical">
+    <p class="col-4 col-d-3 col-l-3 col-t-12 col-m-12">{{description}}</p>
+    <hr class="vertical">
+    <a href="{{url}}" target="_blank" class="col-2 col-d-3 col-l-1 col-t-12 col-m-12">Ver más</a>
+</div>
+{{/each}}

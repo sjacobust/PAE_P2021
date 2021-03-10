@@ -3,15 +3,14 @@
 }
 
 .grid {
-    width: 100%;
-    padding: 0;
+    width: 75%;
     margin: auto;
+    height: auto;
     display: block;
-    @include elements-reset;
 }
 
 .grid > .row {
-    width: 75%;
+    width: 100%;
     height: auto;
     margin: auto;
     display: flex;
@@ -20,6 +19,7 @@
 [class*='col-'] {
     border-radius: 5px;
     height: auto;
+    text-align: center;
 }
 
 @for $column from 1 through $max-columns {
