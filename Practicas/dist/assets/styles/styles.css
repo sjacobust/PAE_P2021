@@ -1,7 +1,7 @@
 .grid {
   width: 75%;
+  padding: 0;
   margin: auto;
-  height: auto;
   display: block; }
 
 .grid > .row {
@@ -12,6 +12,7 @@
 
 [class*='col-'] {
   border-radius: 5px;
+  height: auto;
   text-align: center; }
 
 .grid > .col-1, .row > .col-1 {
@@ -184,5 +185,5 @@ body {
 .verticalHr {
   border: none;
   border-left: 1px solid #73848c;
-  height: 100vh;
+  height: auto;
   width: 1px; }
