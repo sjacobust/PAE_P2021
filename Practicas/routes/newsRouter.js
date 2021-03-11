@@ -1,14 +1,13 @@
 const express = require('express');
 const newsRouter = express.Router();
-const { NewsModel } = require('../src/models');
+const { news } = require('../src/models');
 
-const newsModel = new NewsModel();
 
 newsRouter.get('/', (req, res) => {
     if (req.query.keyword) {
-        newsModel.getByKeyword(req, res);
+        news.getByKeyword(req, res);
     } else {
-        newsModel.getAll(req, res);
+        news.getAll(req, res);
     }
 });
 

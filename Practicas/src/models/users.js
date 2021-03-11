@@ -1,12 +1,13 @@
-class UsersModel {
+const Database = require("./database");
 
-    getAll(req, res) {
-        
-    }
+class Users extends Database{
 
-    getByKeyword(req, res) {
-      
+
+    constructor(){
+        console.log('user model');
+        super();
+        this.useCollection('users');
     }
 }
 
-module.exports = UsersModel;
+module.exports = new Users();

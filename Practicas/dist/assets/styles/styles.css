@@ -187,3 +187,7 @@ body {
   border-left: 1px solid #73848c;
   height: auto;
   width: 1px; }
+
+.inputCenter {
+  margin: auto;
+  padding: auto; }

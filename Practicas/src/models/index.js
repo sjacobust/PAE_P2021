@@ -1,5 +1,9 @@
-const NewsModel = require('./news');
+const news = require('./news');
+const users = require('./users');
+const Database = require('./database');
 
 module.exports = {
-    NewsModel
+    news,
+    users,
+    Database
 }
