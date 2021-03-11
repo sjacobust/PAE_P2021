@@ -1,10 +1,13 @@
 const fetch = require('node-fetch');
 const Database = require('./database');
+const dotenv = require('dotenv');
 
+dotenv.config()
+
+const apiKey = process.env.NEWS_API_KEY;
 
 class News extends Database{
 
-    apiKey = 'apiKey=befa2c5d0c474bce9b5a6ae237d73e0f'
     collectionName = 'news';
     
     constructor() {
@@ -17,7 +20,7 @@ class News extends Database{
     getAll(req, res) {
         if(req.query.country) {
             fetch('http://newsapi.org/v2/top-headlines?' +
-                `country=${req.query.country}&${this.apiKey}`)
+                `country=${req.query.country}&apikey=${apiKey}`)
             .then(res => res.json())
             .then(json => {
                 console.log(`News by Country ${req.query.country}`);
@@ -27,7 +30,7 @@ class News extends Database{
             });
         } else {
             fetch('http://newsapi.org/v2/top-headlines?' +
-                `country=us&${this.apiKey}`)
+                `country=us&apikey=${apiKey}`)
             .then(res => res.json())
             .then(json => {
                 console.log('All news');
@@ -41,7 +44,7 @@ class News extends Database{
     getByKeyword(req, res) {
         fetch('http://newsapi.org/v2/everything?' +
                 `q=${req.query.keyword}&` +
-                `sortBy=popularity&${this.apiKey}`)
+                `sortBy=popularity&apikye=${apiKey}`)
             .then(res => res.json())
             .then(json => {
                 console.log('News by Keyword');
