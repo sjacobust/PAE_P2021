@@ -16,7 +16,7 @@ para descargas las dependencias necesarias para correrlo.
 
 - Ejercicios
 
-   Ejercicios varios, no se actualizando mucho más que las otras. Carpeta específica para jugar con la tecnología vista en clase.
+   Ejercicios varios, no se irá actualizando mucho más que las otras. Carpeta específica para jugar con la tecnología vista en clase.
 
 - Practicas
 
