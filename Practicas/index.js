@@ -5,12 +5,11 @@ const handlebars = require('express-handlebars');
 const dotenv = require('dotenv');
 
 const { newsRouter, usersRouter} = require('./routes');
-const { news, users } = require('./src/models');
+const { news } = require('./src/models');
 
 dotenv.config();
 
 const port = process.env.PORT || 3000;
-const mongoURL = process.env.MONGO_URL;
 
 // Static Files & Global Middlewares
 app.use('/assets', express.static(path.join(__dirname, 'dist', 'assets')));
