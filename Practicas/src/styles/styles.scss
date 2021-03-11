@@ -2,7 +2,8 @@
 @import "sass/mixins";
 @import "sass/grid";
 
-html, body {
+html,
+body {
     @include elements-reset;
     font-family: Arial, Helvetica, sans-serif;
     background-color: $secondary-color;
@@ -18,3 +19,19 @@ html, body {
     border-radius: 5px;
 }
 
+.appHome {
+    color: $primary-color;
+    @include anchor-reformat;
+}
+
+.verticalHr {
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%, 100);
+    height: auto;
+    width: 1px;
+}
+
+.inputCenter {
+    margin: auto;
+    padding: auto;
+}

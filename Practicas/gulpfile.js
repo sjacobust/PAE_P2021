@@ -48,4 +48,5 @@ gulp.task('watch:scripts', gulp.series("scripts", function(done) {
 
 
 gulp.task('build', gulp.parallel(['styles', 'scripts']));
-gulp.task('default', gulp.parallel(['watch:styles', 'watch:scripts', 'watch:html', 'serve']));
+gulp.task('serveProject', gulp.parallel(['watch:styles', 'watch:scripts', 'watch:html', 'serve']));
+gulp.task('default', gulp.parallel(['watch:styles', 'watch:scripts']));
