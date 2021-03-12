@@ -1,0 +1,31 @@
+@import "sass/variables";
+@import "sass/mixins";
+@import "sass/grid";
+
+html,
+body {
+    @include elements-reset;
+    @include openSans-font;
+    background-color: $primary-color;
+    color: $navbar-color;
+}
+
+.verticalHr {
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%, 100);
+    height: auto;
+    width: 1px;
+}
+
+.inputCenter {
+    margin: auto;
+    padding: auto;
+}
+
+footer {
+    font-size: $footer-font-size;
+}
+
+app-root {
+    @include bodoni-font;
+}
