@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config()
 
-const apiKey = process.env.NEWS_API_KEY;
+const apiKey = process.env.NEWS_API_KEY || "'befa2c5d0c474bce9b5a6ae237d73e0f'";
 
 class News extends Database{
 
